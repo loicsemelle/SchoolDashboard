@@ -6,6 +6,7 @@ services:
     container_name: school-dashboard
     restart: unless-stopped
     ports:
-      - "8080:80"
+      # Modifiez le port hôte (ex: 8090, 8888, 3000...) si le port est déjà occupé
+      - "${PORT:-8090}:80"
     environment:
       - NODE_ENV=production
